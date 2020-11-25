@@ -1,6 +1,6 @@
 <?php
 
-    function IsLuhn($array){
+    function IsSim($array){
         $sum = 0;
         $double = false;
         foreach ($array as $char) {
@@ -22,7 +22,7 @@
     if(isset($_POST['number'])){
         $value = $_POST['number'];
         $array = array_reverse(str_split($value));
-        if(IsLuhn($array)){
+        if(IsSim($array)){
             echo "It is a valid SIM number<br>";
         } else {
             echo "It is not a valid SIM number<br>";
